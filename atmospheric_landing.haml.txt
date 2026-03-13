@@ -1,0 +1,104 @@
+!!!
+%html
+  %head
+    %meta{charset: "UTF-8"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
+    %title LogoTrack — Управление грузоперевозками
+    %link{href: "https://fonts.googleapis.com/css?family=Montserrat:400,700|Lato:300,400,700&display=swap", rel: "stylesheet"}
+    / Здесь вы можете подключить CSS/SCSS-файл для стилизации
+  %body
+    .header
+      %nav.navbar
+        %div.logo
+          %img{src: "/images/logo.svg", alt: "LogoTrack Логотип"}
+          %span.logo__title LogoTrack
+        %ul.navbar__menu
+          %li
+            %a{href:"#about"} О платформе
+          %li
+            %a{href:"#tracking"} Отслеживание грузов
+          %li
+            %a{href:"#analytics"} Аналитика маршрутов
+          %li
+            %a{href:"#contact"} Контакты
+        %div.navbar__auth
+          %a.button.button--login{href: "/login"} Войти
+          %a.button.button--register{href: "/register"} Регистрация
+
+    .hero
+      %div.hero__overlay
+        %h1 Логистика с максимальным контролем
+        %p
+          Платформа для эффективного управления грузоперевозками в реальном времени. Приведите ваш бизнес к новым вершинам!
+        %a.button.button--main{href: "#tracking"} Начать отслеживание
+
+    .features
+      %div.feature
+        %img{src: "/images/truck.svg", alt: "Грузовик"}
+        %h2 Отслеживание в реальном времени
+        %p
+          Следите за каждым грузом благодаря интеграции с GPS и современными технологиями.
+
+      %div.feature
+        %img{src: "/images/analytics.svg", alt: "Аналитика"}
+        %h2 Глубокая аналитика маршрутов
+        %p
+          Анализируйте эффективность доставки, оптимизируйте маршруты и экономьте ресурсы.
+
+      %div.feature
+        %img{src: "/images/support.svg", alt: "Поддержка"}
+        %h2 Поддержка 24/7
+        %p
+          Наша команда всегда готова помочь — круглосуточно, без выходных.
+
+    #about.about
+      %h2 О LogoTrack
+      %p
+        LogoTrack — инновационная платформа, которая помогает компаниям и клиентам отслеживать грузы, получать детализированную аналитику и управлять доставками в режиме реального времени.
+
+    #tracking.tracking-section
+      %h2 Онлайн-отслеживание грузов
+      %form.tracking-form
+        %label{for: "tracking-number"} Введите номер груза:
+        %input#tracking-number{type: "text", placeholder: "123456789"}
+        %button.button.button--main{type:"submit"} Отследить
+
+    #analytics.analytics-section
+      %h2 Аналитика маршрутов
+      %p
+        Получайте доступ к подробным отчетам по каждому маршруту, анализируйте время в пути, задержки и оптимизируйте логистику компании.
+      %ul
+        %li Экспорт отчетов в PDF/Excel
+        %li Визуализация маршрутов на карте
+        %li Интеграция с BI-системами
+
+    #contact.contact-section
+      %h2 Контакты
+      %div.contact-details
+        %p
+          %strong Email: 
+          %a{href:"mailto:support@logotrack.ru"} support@logotrack.ru
+        %p
+          %strong Телефон: 
+          %a{href:"tel:+78000000000"} +7 (800) 000-00-00
+        %p
+          %strong Офис: 
+          г. Москва, Логистическая ул., д. 1
+
+      %form.contact-form
+        %label{for:"name"} Ваше имя
+        %input#name{type:"text",required:true}
+        %label{for:"email"} Email
+        %input#email{type:"email",required:true}
+        %label{for:"message"} Сообщение
+        %textarea#message{required:true}
+        %button.button.button--main{type:"submit"} Отправить
+
+    .footer
+      %div.footer__content
+        %span &copy; #{Time.now.year} LogoTrack. Все права защищены.
+        %div.social-links
+          %a{href:"#"}
+            %img{src:"/images/vk.svg", alt:"VK"}
+          %a{href:"#"}
+            %img{src:"/images/telegram.svg", alt:"Telegram"}
